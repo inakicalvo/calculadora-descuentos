@@ -1,0 +1,24 @@
+.marco {
+  border: 1px solid darkgray;
+  padding: 1em;
+  margin: 3rem 1rem;
+  max-width: 96vw;
+}
+
+button {
+  text-transform: uppercase;
+  width: 100%;
+  font-weight: bold;
+}
+
+main {
+  min-height: calc(100vh - 50px);
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+footer {
+  height: 50px;
+}

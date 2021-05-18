@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadoras online para calcular precios originales, porcentajes de descuento y precios finales.">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Calculadora de descuentos, precios originales y precios finales</title>
+</head>
+
+<body class="bg-light">
+  <main class="container mx-auto d-block mt-5 mb-0">
+
+    <h1 class="text-center my-3 display-2 fw-bold">Calculadoras de precios y descuentos</h1>
+    <p class="lead col-lg-6 mx-auto text-center">Olvídate de fórmulas para calcular descuentos y de la regla de tres. Con estas calculadoras podrás calcular precios originales, porcentajes de descuento y precios finales. También te puede servir para calcular precios con IVA o sin él.</p>
+
+    <!-- Calcular porcentaje -->
+    <div class="fluid-container">
+      <div class="row">
+        <section class="mx-auto col-lg">
+          <div class="marco  shadow bg-white">
+            <h2 class="text-center mb-4">Calcular descuento</h2>
+            <div class="alert alert-secondary" role="alert">
+              Calcula el porcentaje de descuento a partir del precio original y del precio final.
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="precio-con-descuento" class="form-label">Precio final</label>
+                <input type="number" name="precio-con-descuento" id="precio-con-descuento" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="precio-original" class="form-label">Precio original</label>
+                <input type="number" name="precio-original" id="precio-original" class="form-control" required>
+              </div>
+              <div class="alert alert-primary visually-hidden" id="alerta1"><span id="porcentaje-descuento" class="fw-bold"></span></div>
+              <button type="submit" id="calcular1" class="btn btn-primary btn-block">Calcular descuento</button>
+            </form>
+          </div>
+        </section>
+        <!-- Calcular precio original -->
+        <section class="mx-auto col-lg">
+          <div class="marco  shadow bg-white">
+            <h2 class="text-center mb-4">Calcular precio original</h2>
+            <div class="alert alert-secondary" role="alert">
+              Calcula el precio original a partir del precio final y del porcentaje de descuento.
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="precio-con-descuento-2" class="form-label">Precio final</label>
+                <input type="number" name="precio-con-descuento-2" id="precio-con-descuento-2" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="pct-descuento-2" class="form-label">Porcentaje de descuento</label>
+                <input type="number" min="0" max="100" name="pct-descuento-2" id="pct-descuento-2" class="form-control" required>
+              </div>
+              <div class="alert alert-primary visually-hidden" id="alerta2"><span id="precio-original2" class="fw-bold"></span></div>
+              <button type="submit" id="calcular2" class="btn btn-primary btn-block">Calcular precio original</button>
+            </form>
+          </div>
+        </section>
+        
+        <!-- Calcular precio final -->
+        <section class="mx-auto col-lg">
+          <div class="marco shadow bg-white">
+            <h2 class="text-center mb-4">Calcular precio final</h2>
+            <div class="alert alert-secondary" role="alert">
+              Calcula el precio final a partir del precio original y del porcentaje de descuento.
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="precio-original-3" class="form-label">Precio original</label>
+                <input type="number" name="precio-original-3" id="precio-original-3" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="pct-descuento-3" class="form-label">Porcentaje de descuento</label>
+                <input type="number"  min="0" max="100" name="pct-descuento-3" id="pct-descuento-3" class="form-control" required>
+              </div>
+              <div class="alert alert-primary visually-hidden" id="alerta3"><span id="precio-final-3" class="fw-bold"></span></div>
+              <button type="submit" id="calcular3" class="btn btn-primary btn-block">Calcular precio final</button>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+
+  </main>
+  <footer class="text-center">
+    <p><script>document.write(new Date().getFullYear())</script> - Esta web es un proyecto sin ánimo de lucro de <a href="https://conmensaje.com" target="_blank" rel="noopener noreferrer">Iñaki Calvo</a> y no contiene <em>cookies</em> ni otras tecnologías de seguimiento ni de captación de datos personales.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
